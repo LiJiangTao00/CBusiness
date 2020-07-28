@@ -1,0 +1,311 @@
+﻿
+@{
+    Layout = null;
+}
+
+<!DOCTYPE html>
+
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+    <link href="~/layuiadmin/layui/css/layui.css" rel="stylesheet" />
+    <link href="~/css/Show.css" rel="stylesheet" />
+    <link href="~/layuiadmin/layui/style.css" rel="stylesheet" />
+
+</head>
+<body>
+    <div class="wrapper">
+        <!-- 导航条 -->
+        <div class="top-nav-wrap">
+            <div class="top-nav">
+                <ul class="top-nav-lf">
+                    <li class="top-nav-menu">
+                        <span class="c-span">中国大陆</span>
+                        <span class="bg-img"></span>
+                        <span></span>
+                    </li>
+                    <li class="top-nav-menu">
+                        <a class="login" href="#">亲，请登录</a>
+                        <a class="sign" href="#">免费注册</a>
+                        <span></span>
+                    </li>
+                    <li class="top-nav-menu">
+                        <a href="#">手机逛淘宝</a>
+                        <span></span>
+                    </li>
+                </ul>
+                <ul class="top-nav-rt">
+                    <li class="top-nav-menu">
+                        <a href="#">我的淘宝</a>
+                        <span class="bg-img "></span>
+                        <span></span>
+                    </li>
+                    <li class="top-nav-menu">
+                        <span class="bg-img shop-car"></span>
+                        <a href="#">购物车 </a>
+                        <span class="bg-img"></span>
+                        <span></span>
+                    </li>
+                    <li class="top-nav-menu">
+                        <span class="bg-img like-plus"></span>
+                        <a href="#">收藏夹</a>
+                        <span class="bg-img like"></span>
+                        <span></span>
+                    </li>
+                    <li class="top-nav-menu">
+                        <a href="#">商品分类</a>
+                        <span></span>
+                    </li>
+                    <li class="top-nav-menu">
+                        <span class="fgf">|</span>
+                        <span></span>
+                    </li>
+                    <li class="top-nav-menu">
+                        <a href="#">卖家中心</a>
+                        <span class="bg-img"></span>
+                        <span></span>
+                    </li>
+                    <li class="top-nav-menu">
+                        <a href="#">联系客服</a>
+                        <span class="bg-img"></span>
+                        <span></span>
+                    </li>
+                    <li class="top-nav-menu">
+                        <span class="bg-img web-nav"></span>
+                        <a href="#">网站导航</a>
+                        <span class="bg-img"></span>
+                        <span></span>
+                    </li>
+                </ul>
+            </div>
+            <div class="top-ad">
+                <img src="images/jd.jpg" alt="">
+            </div>
+        </div>
+        <!-- 搜索区域 -->
+        <div class="layui-tab" lay-filter="current">
+            <ul class="layui-tab-title">
+                <li class="layui-this" lay-id="one">手机验证</li>
+                <li lay-id="two">填写账号信息</li>
+                <li lay-id="three">注册成功</li>
+            </ul>
+            <div class="layui-tab-content">
+                <div class="layui-form-item">
+                    <form class="layui-form" action="">
+                        <div class="layui-form-item">
+                            <label class="layui-form-label">手机号</label>
+                            <div class="layui-input-block">
+                                <input type="text" name="title" required lay-verify="phone" placeholder="请输入标题" autocomplete="off" class="layui-input">
+                            </div>
+                        </div>
+                        <div class="layui-form-item">
+                            <label class="layui-form-label">滑动验证</label>
+                            <div class="layui-input-block">
+                                <div id="slider"></div>
+                            </div>
+                        </div>
+                        <div class="layui-form-item">
+                            <div class="layui-input-block">
+                                <button class="layui-btn" lay-submit lay-filter="formDemo">立即提交</button>
+                                <button type="reset" class="layui-btn layui-btn-primary">重置</button>
+                            </div>
+                        </div>
+                    </form>
+                </div>
+                <div class="layui-tab-item">
+                    <form class="layui-form" action="">
+                        <div class="layui-form-item">
+                            <label class="layui-form-label">用户名称</label>
+                            <div class="layui-input-block">
+                                <input type="text" name="title" required lay-verify="required" placeholder="请输入标题" autocomplete="off" class="layui-input">
+                            </div>
+                        </div>
+                        <div class="layui-form-item">
+                            <label class="layui-form-label">用户密码</label>
+                            <div class="layui-input-inline">
+                                <input type="password" name="password" required lay-verify="required" placeholder="请输入密码" autocomplete="off" class="layui-input">
+                            </div>
+                            <div class="layui-form-mid layui-word-aux">辅助文字</div>
+                        </div>
+                        <div class="layui-form-item">
+                            <label class="layui-form-label">选择框</label>
+                            <div class="layui-input-block">
+                                <select name="city" lay-verify="required">
+                                    <option value=""></option>
+                                    <option value="0">北京</option>
+                                    <option value="1">上海</option>
+                                    <option value="2">广州</option>
+                                    <option value="3">深圳</option>
+                                    <option value="4">杭州</option>
+                                </select>
+                            </div>
+                        </div>
+                        <div class="layui-form-item">
+                            <label class="layui-form-label">性别</label>
+                            <div class="layui-input-block">
+                                <input type="radio" name="sex" value="男" title="男">
+                                <input type="radio" name="sex" value="女" title="女" checked>
+                            </div>
+                        </div>
+                        <div class="layui-form-item">
+                            <label class="layui-form-label">真实姓名</label>
+                            <div class="layui-input-block">
+                                <input type="text" name="title" required lay-verify="required" placeholder="请输入标题" autocomplete="off" class="layui-input">
+                            </div>
+                        </div>
+                        <div class="layui-form-item">
+                            <label class="layui-form-label">电话</label>
+                            <div class="layui-input-block">
+                                <input type="text" name="title" required lay-verify="required" placeholder="请输入标题" autocomplete="off" class="layui-input">
+                            </div>
+                        </div>
+                        <div class="layui-form-item">
+                            <label class="layui-form-label">用户名称</label>
+                            <div class="layui-input-block">
+                                <input type="text" name="title" required lay-verify="required" placeholder="请输入标题" autocomplete="off" class="layui-input">
+                            </div>
+                        </div>
+                        <div class="layui-form-item">
+                            <div class="layui-input-block">
+                                <button class="layui-btn" lay-submit lay-filter="formDemo">立即提交</button>
+                                <button type="reset" class="layui-btn layui-btn-primary">重置</button>
+                            </div>
+                        </div>
+                    </form>
+                </div>
+                <div class="layui-tab-item">
+                    <div class="container-fluid container-fluid-bg">
+                        <div class="row">
+                            <nav class="header-top">
+                                <img src="../../img/logo.png" class="logo" id="register-success-logo">
+                                <div style="float: right;" id="count-down">
+                                    <span style="padding-right: 30px"><label id="zhuan">5</label>秒后将跳转至登录页</span>
+                                </div>
+                            </nav>
+                        </div>
+                    </div>
+                    <div class="container-fluid main">
+                        <div class="row">
+                            <div class="body">
+                                <div>
+                                    <img class="img" src="../../img/success.jpg" alt="注册成功">
+                                </div>
+                                <div>
+                                    <h3 class="body-h">注册成功！</h3>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</body>
+</html>
+<script src="~/lib/jquery/dist/jquery.js"></script>
+<script src="~/layuiadmin/layui/layui.js"></script>
+<!-- 注意：如果你直接复制所有代码到本地，上述js路径需要改成你本地的 -->
+<script type="text/javascript" charset="utf-8">
+    layui.config({
+        base: 'http://localhost:52192/dist/sliderVerify/'
+    }).use(['sliderVerify', 'jquery', 'form', 'layedit', 'laydate', 'element'], function () {
+        var sliderVerify = layui.sliderVerify,
+            $ = layui.jquery,
+            form = layui.form,
+            element = layui.element,
+            layer = layui.layer,
+            layedit = layui.layedit,
+            laydate = layui.laydate;
+        var slider = sliderVerify.render({
+            elem: '#slider',
+            onOk: function () {//当验证通过回调
+                layer.msg("滑块验证通过");
+            }
+        })
+
+        form.verify({
+            phone: [/^1[3|4|5|7|8]\d{9}$/, '手机必须11位，只能是数字！']
+        });
+        //创建一个编辑器
+
+        layedit.build('LAY_demo_editor');
+        //监听提交
+        form.on('submit(formDemo)', function (data) {
+            if (slider.isOk()) {
+
+                layer.msg("验证完毕");
+                layui.admin.events.closeThisTabs();
+                Tiao();
+            } else {
+                layer.msg("请先通过滑块验证");
+            }
+            return false;
+        });
+        function Tiao() {
+            element.tabChange('current','two');
+        }
+    })
+    
+</script>
+@*<script>
+    layui.use(['form', 'layedit', 'laydate', 'element'], function () {
+        var form = layui.form
+            , $ = layui.jquery
+            , element = layui.element
+            , layer = layui.layer
+            , layedit = layui.layedit
+
+            , laydate = layui.laydate; //Tab的切换功能，切换事件监听等，需要依赖element模块
+        form.verify({
+            phone: [/^1[3|4|5|7|8]\d{9}$/, '手机必须11位，只能是数字！']
+        });
+        //创建一个编辑器
+
+        layedit.build('LAY_demo_editor');
+        //监听提交
+
+
+    });
+</script>*@
+<script>
+
+    //$(function () {
+    //    var time = 5;
+    //    var timer = setInterval(function () {
+    //        var str = document.getElementById("zhuan");
+    //        if (time >= 1) {
+    //            str.innerHTML = time;
+    //            time--;
+    //        } else {
+    //            clearInterval(timer);
+    //            location.href = "https://www.baidu.com";
+    //        }
+    //    }, 1000)
+
+    //})
+
+</script>
+<style>
+    .body {
+        background: #ffffff;
+        width: 100%;
+        height: 100%;
+        margin-top: 1%;
+        text-align: center;
+    }
+
+    .img {
+        padding-top: 10%;
+    }
+
+    .body-h {
+        letter-spacing: 20px;
+        font-size: 40px;
+        margin-left: 6%
+    }
+</style>
+
+

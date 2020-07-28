@@ -1,0 +1,69 @@
+﻿<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8" />
+    <title></title>
+    <script src="../../lib/jquery/dist/jquery.js"></script>
+</head>
+<body>
+    <div class="container-fluid container-fluid-bg">
+        <div class="row">
+            <nav class="header-top">
+                <img src="../../img/logo.png" class="logo" id="register-success-logo">
+                <div style="float: right;" id="count-down">
+                    <span style="padding-right: 30px"><label id="zhuan">5</label>秒后将跳转至登录页</span>
+                </div>
+            </nav>
+        </div>
+    </div>
+    <div class="container-fluid main">
+        <div class="row">
+            <div class="body">
+                <div>
+                    <img class="img" src="../../img/success.jpg" alt="注册成功">
+                </div>
+                <div>
+                    <h3 class="body-h">注册成功！</h3>
+                </div>
+            </div>
+        </div>
+    </div>
+</body>
+</html>
+<script>
+
+    $(function () {
+        var time = 5;
+        var timer = setInterval(function () {
+            var str = document.getElementById("zhuan");
+            if (time >= 1) {
+                str.innerHTML = time;
+                time--;
+            } else {
+                clearInterval(timer);
+                location.href = "https://www.baidu.com";
+            }
+        }, 1000)
+
+    })
+
+</script>
+<style>
+    .body {
+        background: #ffffff;
+        width: 100%;
+        height: 100%;
+        margin-top: 1%;
+        text-align: center;
+    }
+
+    .img {
+        padding-top: 10%;
+    }
+
+    .body-h {
+        letter-spacing: 20px;
+        font-size: 40px;
+        margin-left: 6%
+    }
+</style>

@@ -1,0 +1,70 @@
+﻿
+@{
+    Layout = null;
+}
+
+<!DOCTYPE html>
+
+<html>
+<head>
+    <meta name="viewport" content="width=device-width" />
+    <title>test</title>
+    <script src="~/lib/jquery/dist/jquery.js"></script>
+    <script src="~/lib/bootstrap/dist/js/bootstrap.js"></script>
+    <script src="~/js/site.js"></script>
+    <link href="~/layuiadmin/layui/css/layui.css" rel="stylesheet" />
+    <script src="~/layuiadmin/layui/layui.js"></script>
+</head>
+<body>
+    <form class="layui-form" action="">
+        <div class="layui-form-item">
+            <label class="layui-form-label">等级名称</label>
+            <div class="layui-input-inline">
+                <input name="GName" style="width:600px" id="GName" class="layui-input" type="text" placeholder="请输入名称" autocomplete="off" lay-verify="required">
+            </div>
+        </div>
+        <div class="layui-form-item">
+            <label class="layui-form-label">所需积分</label>
+            <div class="layui-input-inline">
+                <input name="GSize" id="GSize" class="layui-input" type="text" placeholder="请输入积分" autocomplete="off" lay-verify="required">
+            </div>
+        </div>
+        <div class="layui-form-item">
+            <div class="layui-input-block">
+                <button class="layui-btn" type="submit" lay-filter="demo1" lay-submit="">立即提交</button>
+                <button class="layui-btn layui-btn-primary" type="reset">重置</button>
+            </div>
+        </div>
+    </form>
+</body>
+</html>
+<script>
+    $('GSize').attr('value','11');
+    layui.use(['form', 'layedit', 'laydate'], function () {
+        var form = layui.form
+            , layer = layui.layer
+
+        //监听提交
+        form.on('submit(demo1)', function (data) {
+            data.field.GSize = parseInt(data.field.GSize);
+            console.log(JSON.stringify(data.field));
+            $.ajax({
+                url: "http://localhost:49722/api/admin/SetGrade",
+                type: "post",
+                contentType: "application/json",
+                data: JSON.stringify(data.field),
+                success: function (result) {
+                    if (result > 0) {
+                        alert('成功');
+                        location.href = "/admin/grade";
+                    }
+                    else {
+                        alert('失败')
+                    }
+                }
+
+            })
+            return false;
+        });
+    });
+</script>

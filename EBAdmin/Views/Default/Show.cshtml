@@ -1,0 +1,584 @@
+﻿
+@{
+    Layout = null;
+}
+
+<!DOCTYPE html>
+
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+    <link href="~/css/Show.css" rel="stylesheet" />
+    <script src="~/layuiadmin/layui/layui.js"></script>
+    <link href="~/layuiadmin/layui/css/layui.css" rel="stylesheet" />
+    <script src="~/lib/jquery/dist/jquery.js"></script>
+</head>
+<body>
+    <div class="wrapper">
+        <!-- 导航条 -->
+        <div class="top-nav-wrap">
+            <div class="top-nav">
+                <ul class="top-nav-lf">
+                    <li class="top-nav-menu">
+                        <span class="c-span">中国大陆</span>
+                        <span class="bg-img"></span>
+                        <span></span>
+                    </li>
+                    <li class="top-nav-menu">
+                        <a class="login" href="/default/test">亲，请登录</a>
+                        <a class="sign" href="#">免费注册</a>
+                        <span></span>
+                    </li>
+                    <li class="top-nav-menu">
+                    </li>
+                </ul>
+                <ul class="top-nav-rt">
+                    <li class="top-nav-menu">
+                        <a href="#">我的信息</a>
+                        <span class="bg-img "></span>
+                        <span></span>
+                    </li>
+                    <li class="top-nav-menu">
+                        <span class="bg-img shop-car"></span>
+                        <a href="#">购物车 </a>
+                        <span class="bg-img"></span>
+                        <span></span>
+                    </li>
+                    <li class="top-nav-menu">
+                        <span class="bg-img like-plus"></span>
+                        <a href="#">收藏夹</a>
+                        <span class="bg-img like"></span>
+                        <span></span>
+                    </li>
+                    <li class="top-nav-menu">
+                        <a href="#">商品分类</a>
+                        <span></span>
+                    </li>
+                    <li class="top-nav-menu">
+                        <span class="fgf">|</span>
+                        <span></span>
+                    </li>
+                    <li class="top-nav-menu">
+                        <a href="#">卖家中心</a>
+                        <span class="bg-img"></span>
+                        <span></span>
+                    </li>
+                    @*<li class="top-nav-menu">
+                            <a href="#">联系客服</a>
+                            <span class="bg-img"></span>
+                            <span></span>
+                        </li>
+                        <li class="top-nav-menu">
+                            <span class="bg-img web-nav"></span>
+                            <a href="#">网站导航</a>
+                            <span class="bg-img"></span>
+                            <span></span>
+                        </li>*@
+                </ul>
+            </div>
+            <div class="top-ad">
+                <img src="images/jd.jpg" alt="">
+            </div>
+        </div>
+        <!-- 搜索区域 -->
+        <div class="search-wrap">
+            <div class="search">
+                <div class="logo-box"></div>
+                <div class="search-box">
+                    <div class="search-t">
+                        <div class="select">
+                            <ul>
+                                <li class="current">宝贝</li>
+                                <li>天猫</li>
+                                <li>店铺</li>
+                            </ul>
+                        </div>
+                        <div class="search-mian">
+                            <a href="#" class="fdj"></a>
+                            <form action="">
+                                <div class="search-inp-box">
+                                    <div class="search-inp">
+                                        <input type="text" placeholder="荣耀10降价">
+                                    </div>
+                                </div>
+                                <div class="btn">
+                                    <button class="submit">搜索</button>
+                                </div>
+                            </form>
+                            <a href="#" class="cameral"></a>
+                        </div>
+                    </div>
+                    <div class="search-b">
+                        <a href="#" class="active">口红</a>
+                        <a href="#" class="active">眼霜</a>
+                        <a href="#">面膜</a>
+                        <a href="#">夹克</a>
+                        <a href="#">衬衫</a>
+                        <a href="#" class="active">牛仔裤</a>
+                        <a href="#">沙发</a>
+                        <a href="#">护肤品</a>
+                        <a href="#" class="active">男士外套</a>
+                        <a href="#">男鞋</a>
+                        <a href="#">化妆品</a>
+                        <a href="#" class="active">休闲裤</a>
+                    </div>
+                </div>
+                @*<div class="ewm-box">
+                        <a href="#" class="phone">手机淘宝</a>
+                        <a href="#" class="ewm"> </a>
+                        <a href="#" class="xh">X</a>
+                    </div>*@
+            </div>
+        </div>
+        <!-- 中间导航条 -->
+        <div class="screen-nav">
+            <div class="screen-nav-con">
+                <h2>主题市场</h2>
+                <ul>
+                    <li><a href="#">天猫</a></li>
+                    <li><a href="#">聚划算</a></li>
+                    <li><a href="#">天猫超市</a></li>
+                </ul>
+                <ul>
+                    <li><a href="#">|</a></li>
+                    <li><a href="#">淘抢购</a></li>
+                    <li><a href="#">电器城</a></li>
+                    <li><a href="#">司法拍卖</a></li>
+                    <li><a href="#">淘宝精选</a></li>
+                    <li><a href="#">兴隆抚贫</a></li>
+                </ul>
+                <ul>
+                    <li><a href="#">|</a></li>
+                    <li><a href="#">飞猪旅行</a></li>
+                    <li><a href="#">智能生活</a></li>
+                    <li><a href="#">苏宁易购</a></li>
+                </ul>
+            </div>
+        </div>
+        <!-- 主体展示部分 -->
+        <div class="screen-box">
+            <!-- 先两栏布局 -->
+            <div class="mian">
+                <div class="mian-inner">
+                    @*左边类型显示*@
+                    <div class="inner-lf">
+                        <ul id="type">
+                        </ul>
+                    </div>
+                    @*中间轮播 热销商品*@
+                    <div class="inner-cer">
+                        <div class="layui-carousel" id="test10">
+                            <div carousel-item="" id="picture">
+                                <div><img src="~/img/1.png"></div>
+                                <div><img src="~/img/2.png"></div>
+                                <div><img src="~/img/3.png"></div>
+                                <div><img src="~/img/4.png"></div>
+                                <div><img src="~/img/5.png"></div>
+                                <div><img src="~/img/6.png"></div>
+                                <div><img src="~/img/7.png"></div>
+                            </div>
+                        </div>
+                        @*本月top10*@
+                        <div class="pic-box">
+                            <p>本月热销榜</p>
+                            <div class="layui-carousel" id="test2" style="margin-top: 15px;">
+                                <div carousel-item="" id="top10">
+                                    <div>条目1</div>
+                                    <div>条目2</div>
+                                </div>
+                            </div>
+                        </div>
+                        @*<div class="inner-bt">
+
+                                <div class="head">
+                                    <img src="" alt="">
+
+                                    <span>理想生话上天猫</span>
+                                </div>
+                                <a href="#">
+                                    <img src="" alt="">
+                                </a>
+                            </div>*@
+                    </div>
+                    <div class="inner-rt">
+                        <a href="#" class=""><img src="" alt=""></a>
+                        <div class="hot">
+                            <span>今日热卖</span>
+                            <a href="#">
+                                <img src="" alt="">
+                            </a>
+                        </div>
+                    </div>
+                </div>
+                <div class="mian-bottom">
+                    <div class="content">
+                        <div class="logo"></div>
+                        <a href="#">
+                            @*<img src="" alt="">
+                                <h4>双11前，全国最大的天猫新零售书店来了</h4>
+                                <p>10月26日，全国最大的天猫零售体验书店在杭州开业，成为杭州最新的一道风景线。</p>*@
+                        </a>
+                    </div>
+                </div>
+            </div>
+            <div class="box-right">
+                <div class="member">
+                    <div class="member-head">
+                        <div class="head">
+                            <a href="#">
+                                <span></span>
+                                <p id="name">游客</p>
+                            </a>
+                        </div>
+                        <span class="hello"> hi! 你好</span>
+                        <p>
+                            <a href="#">
+                                <span class="tb"></span>
+                                领淘金币抵钱
+                            </a>
+                            <a href="#">
+                                <span class="meb"></span>
+                                会员俱乐部
+                            </a>
+                        </p>
+                    </div>
+                    <div class="member-foot">
+                        <a href="/default/test" class="login">登录</a>
+                        <a href="#" class="">注册</a>
+
+                    </div>
+                </div>
+                <div>
+                    <div><a href="#">content</a></div>
+                </div>
+                @*<div class="massage">
+                        <a href="#">
+                            网上有害信息举报
+                            <span></span>
+                        </a>
+                    </div>
+                    <div class="notice">
+                        <div class="title">
+                            <ul>
+                                <li>
+                                    <a href="#" class="active">公告</a>
+                                </li>
+                                <li>
+                                    <a href="#">规则</a>
+                                </li>
+                                <li>
+                                    <a href="#">论坛</a>
+                                </li>
+                                <li>
+                                    <a href="#">安全</a>
+                                </li>
+                                <li>
+                                    <a href="#">公益</a>
+                                </li>
+                            </ul>
+                        </div>
+                        <div class="content">
+                            <ul>
+                                <li>
+                                    <a href="#" class="active">
+                                        卖家如何设置公益宝贝
+                                    </a>
+                                </li>
+                                <li>
+                                    <a href="#">
+                                        公益项目如何加入公益
+                                    </a>
+                                </li>
+                                <li>
+                                    <a href="#" class="active">
+                                        四重曝光! 请你出道~
+                                    </a>
+                                </li>
+                                <li>
+                                    <a href="#">公益机构开店攻略</a>
+                                </li>
+                            </ul>
+                        </div>
+                    </div>
+                    <div class="mobule">
+                        <ul>
+                            <li>
+                                <a href="#">
+                                    <span class=""></span>
+                                    <p>充话费</p>
+                                </a>
+                            </li>
+                            <li>
+                                <a href="#">
+                                    <span class=""></span>
+                                    <p>旅行</p>
+                                </a>
+                            </li>
+                            <li>
+                                <a href="#">
+                                    <span class=""></span>
+                                    <p>车险</p>
+                                </a>
+                            </li>
+                            <li>
+                                <a href="#">
+                                    <span class=""></span>
+                                    <p>游戏</p>
+                                </a>
+                            </li>
+                            <li>
+                                <a href="#">
+                                    <span class=""></span>
+                                    <p>彩票</p>
+                                </a>
+                            </li>
+                            <li>
+                                <a href="#">
+                                    <span class=""></span>
+                                    <p>电影</p>
+                                </a>
+                            </li>
+                            <li>
+                                <a href="#">
+                                    <span class=""></span>
+                                    <p>酒店</p>
+                                </a>
+                            </li>
+                            <li>
+                                <a href="#">
+                                    <span class=""></span>
+                                    <p>理财</p>
+                                </a>
+                            </li>
+                            <li>
+                                <a href="#">
+                                    <span class=""></span>
+                                    <p>找服务</p>
+                                </a>
+                            </li>
+                            <li>
+                                <a href="#">
+                                    <span class=""></span>
+                                    <p>演出</p>
+                                </a>
+                            </li>
+                            <li>
+                                <a href="#">
+                                    <span class=""></span>
+                                    <p>水电费</p>
+                                </a>
+                            </li>
+                            <li>
+                                <a href="#">
+                                    <span class=""></span>
+                                    <p>火车票</p> 
+                                </a>
+                            </li>
+                        </ul>
+                    </div>*@
+            </div>
+        </div>
+    </div>
+</body>
+</html>
+<script src="~/lib/jquery/dist/jquery.js"></script>
+<script>
+    var token = localStorage["token"];
+    $(function () {
+        GetName();
+        Type();
+    })
+    //获取登录人信息
+    function GetName() {
+        var token = localStorage["token"];
+        console.log(token);
+        if (localStorage.getItem("token") != null) {
+            $.ajax({
+                url: "http://localhost:49722/api/admin/ResolveToken?token=" + token,
+                type: "get",
+                dataType: "json",
+                success: function (data) {
+                    $('#name').empty();
+                    console.log(data);
+                    $('#name').html(data.userName);
+                    $('.top-nav-menu').attr('display',true);
+                }
+            })
+        }
+    }
+    //显示左边栏类型
+    function Type() {
+        $.ajax({
+            url: "http://localhost:49722/api/admin/ShowType",
+            type: "get",
+            dataType: "json",
+            success: function (data) {
+                console.log(data);
+                $('#type').empty();
+                var str = '';
+                $.each(data, function (i, n) {
+                    str += '<li><a href="/goods/showtype?id=' + n.productTypeId + '">' + n.productTypeName + '</a><span></span></li>';
+                })
+                $('#type').append(str);
+            }
+        })
+        Picture();
+    }
+    ///显示热销商品
+    function Picture() {
+        $.ajax({
+            url: "http://localhost:49722/api/admin/GetRedis?ProductTypeName=热销商品",
+            type: "get",
+            dataType: "json",
+            success: function (data) {
+                console.log(data);
+                $('#picture').empty();
+                var str = '';
+                $.each(data, function (i, n) {
+                    str += '<div><a href="/goods/showtype?id=' + n.productTypeId + '"><img src="' + n.productPic + '"></a></div>';
+                })
+                $('#picture').append(str);
+            }
+        })
+        ShowTop();
+    }
+    ///本月前10
+    function ShowTop() {
+        $.ajax({
+            url: "http://localhost:49722/api/admin/GetRedis?ProductTypeName=本月top10",
+            type: "get",
+            dataType: "json",
+            success: function (data) {
+                console.log(data);
+                $('#top10').empty();
+                var str = '';
+                $.each(data, function (i, n) {
+                    str += '<div><a href="/goods/showtype?id=' + n.productTypeId + '"><img src="' + n.productPic + '"></a></div>';
+                })
+                $('#top10').append(str);
+            }
+        })
+    }
+</script>
+<script>
+    layui.use(['carousel', 'form'], function () {
+        var carousel = layui.carousel
+            , form = layui.form;
+        //图片轮播
+        carousel.render({
+            elem: '#test10'
+            , width: '668px'
+            , height: '360px'
+            , interval: 3000
+        });
+        //改变下时间间隔、动画类型、高度
+        carousel.render({
+            elem: '#test2'
+            , width: '668px'
+            , interval: 1800
+            , anim: 'fade'
+            , height: '120px'
+        });
+    });
+</script>
+@*<ul>
+        <li>
+            <a href="#">女装/</a>
+            <a href="#">男装/</a>
+            <a href="#">内衣</a>
+            <span></span>
+        </li>
+        <li>
+            <a href="#">鞋靴/</a>
+            <a href="#">箱包/</a>
+            <a href="#">配件</a>
+            <span></span>
+        </li>
+        <li>
+            <a href="#">家电/</a>
+            <a href="#">数码/</a>
+            <a href="#">手机</a>
+            <span></span>
+        </li>
+        <li>
+            <a href="#">童装玩具/</a>
+            <a href="#">孕产/</a>
+            <a href="#">用品</a>
+            <span></span>
+        </li>
+        <li>
+            <a href="#">美妆/</a>
+            <a href="#">洗护/</a>
+            <a href="#">保健品</a>
+            <span></span>
+        </li>
+        <li>
+            <a href="#">饰品/</a>
+            <a href="#">珠宝/</a>
+            <a href="#">手表眼镜</a>
+            <span></span>
+        </li>
+        <li>
+            <a href="#">运动/</a>
+            <a href="#">户外/</a>
+            <a href="#">乐器</a>
+            <span></span>
+        </li>
+        <li>
+            <a href="#">游戏/</a>
+            <a href="#">动漫/</a>
+            <a href="#">影视</a>
+            <span></span>
+        </li>
+        <li>
+            <a href="#">美食/</a>
+            <a href="#">生鲜/</a>
+            <a href="#">零食</a>
+            <span></span>
+        </li>
+        <li>
+            <a href="#">鲜花/</a>
+            <a href="#">宠物/</a>
+            <a href="#">农资</a>
+            <span></span>
+        </li>
+        <li>
+            <a href="#">工具/</a>
+            <a href="#">装修/</a>
+            <a href="#">建材</a>
+            <span></span>
+        </li>
+        <li>
+            <a href="#">家具/</a>
+            <a href="#">家饰/</a>
+            <a href="#">家纺</a>
+            <span></span>
+        </li>
+        <li>
+            <a href="#">汽车/</a>
+            <a href="#">二手车/</a>
+            <a href="#">用品</a>
+            <span></span>
+        </li>
+        <li>
+            <a href="#">办公/</a>
+            <a href="#">DIY/</a>
+            <a href="#">五金电子</a>
+            <span></span>
+        </li>
+        <li>
+            <a href="#">百货/</a>
+            <a href="#">餐厨/</a>
+            <a href="#">家庭保健</a>
+            <span></span>
+        </li>
+        <li>
+            <a href="#">学习/</a>
+            <a href="#">卡卷/</a>
+            <a href="#">本地服务</a>
+            <span></span>
+        </li>
+    </ul>*@

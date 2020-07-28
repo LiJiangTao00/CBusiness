@@ -1,0 +1,1310 @@
+﻿body {
+    background-color: #f1f1f1;
+}
+
+a {
+    text-decoration: none;
+}
+
+li {
+    list-style: none;
+}
+
+header {
+    width: 100%;
+    height: 36px;
+    margin: 0 auto;
+    background-color: #f5f5f5;
+}
+
+    header a {
+        font-size: 14px;
+        padding-right: 16px;
+    }
+
+    header > nav > span:first-child > a:first-child {
+        color: red;
+    }
+
+    header > nav {
+        width: 1190px;
+        height: 36px;
+        margin: 0 auto;
+        /*overflow: hidden;*/
+    }
+
+        header > nav > span {
+            margin-right: 20px;
+            font-size: 16px;
+            line-height: 36px;
+        }
+
+            header > nav > span:first-child {
+                float: left;
+            }
+
+                header > nav > span:first-child > a:not(:first-child) {
+                    color: black;
+                }
+
+            header > nav > span:last-child {
+                float: right;
+            }
+
+                header > nav > span:last-child > a {
+                    color: black;
+                    padding-left: 16px;
+                }
+
+                    header > nav > span:last-child > a:hover {
+                        color: red;
+                    }
+
+                    header > nav > span:last-child > a:nth-child(5) {
+                        border-left: 1px solid gainsboro;
+                    }
+
+    header img {
+        padding-right: 10px;
+    }
+
+ol {
+    width: 46px;
+    padding: 0;
+    display: none;
+    left: 16px;
+    text-align: center;
+    background-color: red;
+}
+
+    ol > li {
+        border: 1px solid white;
+        color: white;
+    }
+
+nav > span:last-child > a:first-child:hover ol {
+    display: block;
+    position: absolute;
+    z-index: 2;
+}
+
+header > nav > span:last-child > a:first-child {
+    position: relative;
+}
+
+ol > li {
+    width: 46px;
+    height: 20px;
+    text-align: center;
+    line-height: 20px;
+    transition: all 1s;
+    transform: rotateY(180deg);
+}
+
+nav > span:last-child > a:first-child:hover li {
+    transform: none;
+}
+
+nav > span:last-child > a:first-child:hover:hover > li:first-child {
+    transition-delay: 300ms;
+}
+
+nav > span:last-child > a:first-child:hover:hover > li:nth-child(2) {
+    transition-delay: 600ms;
+}
+
+nav > span:last-child > a:first-child:hover:hover > li:nth-child(3) {
+    transition-delay: 900ms;
+}
+/*淘宝网*/
+.taobaowang {
+    width: 100%;
+    height: 193px;
+    background-color: #ffffff;
+}
+
+.taobaowang-top {
+    width: 1190px;
+    height: 128px;
+    margin: 0 auto;
+    overflow: hidden;
+    padding-top: 28px;
+}
+
+    .taobaowang-top > img {
+        width: 190px;
+        height: 100px;
+        float: left;
+        margin-right: 70px;
+        overflow: hidden;
+    }
+
+.baobei > a {
+    color: red;
+    font-size: 14px;
+    width: 50px;
+    height: 28px;
+    line-height: 28px;
+    margin: 0 auto;
+    padding: 7px 8px;
+    margin-right: 0;
+}
+
+    .baobei > a:hover {
+        background-color: #ff5502;
+        color: white;
+    }
+
+.shuru {
+    width: 622px;
+    height: 38px;
+    border: 1px solid orangered;
+    margin-left: 270px;
+}
+
+form > input {
+    width: 498px;
+    height: 28px;
+    border: 1px solid orangered;
+    padding-left: 34px;
+    color: gray;
+    padding-top: 8px;
+}
+
+form > button {
+    font-size: 20px;
+    height: 39px;
+    width: 88px;
+    background-color: #ff5502;
+    color: white;
+    border: 1px solid orangered;
+    position: relative;
+}
+
+.gaoji {
+    height: 42px;
+    width: 38px;
+    margin: 0 auto;
+    position: absolute;
+    margin-left: 10px;
+}
+
+    .gaoji:hover {
+        color: orangered;
+    }
+
+.xinkuan > a {
+    color: gray;
+    margin-right: 6px;
+    font-size: 12px;
+    margin-top: 8px;
+}
+
+    .xinkuan > a:hover {
+        color: #ff5502;
+    }
+
+    .xinkuan > a:last-child {
+        margin-left: 30px;
+    }
+
+.taobaowang-bottom {
+    width: 1190px;
+    height: 36px;
+    margin: 0 auto;
+}
+
+    .taobaowang-bottom > div:first-child {
+        width: 190px;
+        height: 36px;
+        overflow: hidden;
+        float: left;
+    }
+
+        .taobaowang-bottom > div:first-child > p {
+            color: white;
+            background-color: orangered;
+            font-size: 18px;
+            line-height: 36px;
+            padding-left: 6px;
+            width: 190px;
+            float: left;
+        }
+
+            .taobaowang-bottom > div:first-child > p > strong {
+                margin-right: 80px;
+            }
+
+    .taobaowang-bottom > div:last-child > a {
+        color: black;
+        font-size: 16px;
+        margin-left: 20px;
+        font-weight: 700;
+        line-height: 36px;
+    }
+
+        .taobaowang-bottom > div:last-child > a:nth-child(3) {
+            border-right: 1px solid gainsboro;
+            padding-right: 16px;
+        }
+
+.tese {
+    border-right: 1px solid gainsboro;
+    padding-right: 16px;
+}
+
+.taobaowang-bottom > div:last-child > a:nth-child(-n+3) {
+    color: #ff5502;
+}
+/*主题市场*/
+.zhuti {
+    width: 100%;
+    height: 700px;
+    margin: 0 auto;
+    background-color: #f1f1f1;
+    overflow: hidden;
+}
+
+.nvzhuang {
+    width: 190px;
+    height: 520px;
+    background-color: #ff5502;
+    float: left;
+}
+
+.tiammao img {
+    margin-right: 10px;
+}
+
+.jinri > div > a > p {
+    margin-left: 12px;
+}
+
+.zhongjian {
+    width: 1190px;
+    height: 620px;
+    margin: 0 auto;
+}
+
+.nvzhuang span {
+    color: white;
+    font-size: 12px;
+    font-weight: 800;
+    margin: 10px 0px;
+}
+
+.nvzhuang > ul > li > span:first-child {
+    margin-left: 8px;
+}
+
+.nvzhuang > ul > li {
+    margin-bottom: 9px;
+}
+
+.tianmao {
+    width: 701px;
+    height: 513px;
+    margin: auto;
+    background-color: white;
+    margin-right: 282px;
+}
+
+    .tianmao > div:nth-child(3) > span:nth-child(3) {
+        color: gray;
+        font-size: 14px;
+    }
+
+    .tianmao > div:nth-child(3) > span:nth-child(2) {
+        color: black;
+        font-size: 16px;
+    }
+
+    .tianmao > div:nth-child(3) {
+        border-bottom: 3px solid red;
+        width: 520px;
+    }
+
+        .tianmao > div:nth-child(3) > span:nth-child(3):hover {
+            color: blue;
+        }
+
+        .tianmao > div:nth-child(3) > span {
+            text-shadow: 2px 3px 3px green;
+        }
+
+.xinji > div:first-child {
+    float: left;
+}
+
+    .xinji > div:first-child > p:first-child {
+        color: red;
+        font-size: 16px;
+        font-weight: 700;
+        margin: 6px 9px;
+    }
+
+    .xinji > div:first-child > p:nth-child(2) {
+        color: black;
+        font-size: 16px;
+        font-weight: 700;
+        margin: 6px 9px;
+    }
+
+    .xinji > div:first-child > a > p {
+        color: gainsboro;
+        font-size: 14px;
+        margin-left: 9px;
+    }
+
+        .xinji > div:first-child > a > p:hover {
+            color: red;
+        }
+
+.xinji > div:nth-child(2) {
+    float: left;
+}
+
+    .xinji > div:nth-child(2) > p:first-child {
+        color: red;
+        font-size: 16px;
+        font-weight: 700;
+        margin: 6px 9px;
+    }
+
+    .xinji > div:nth-child(2) > p:nth-child(2) {
+        color: black;
+        font-size: 16px;
+        font-weight: 700;
+        margin: 6px 9px;
+    }
+
+    .xinji > div:nth-child(2) > a > p {
+        color: gainsboro;
+        font-size: 14px;
+        margin-left: 9px;
+    }
+
+        .xinji > div:nth-child(2) > a > p:hover {
+            color: red;
+        }
+
+    .xinji > div:nth-child(2) > img {
+        height: 130px;
+    }
+
+.xinji > div:nth-child(3) {
+    float: left;
+}
+
+    .xinji > div:nth-child(3) > p:first-child {
+        color: red;
+        font-size: 16px;
+        font-weight: 700;
+        margin: 6px 9px;
+    }
+
+    .xinji > div:nth-child(3) > p:nth-child(2) {
+        color: black;
+        font-size: 16px;
+        font-weight: 700;
+        margin: 6px 9px;
+    }
+
+    .xinji > div:nth-child(3) > a > p {
+        color: gainsboro;
+        font-size: 14px;
+        margin-left: 9px;
+    }
+
+        .xinji > div:nth-child(3) > a > p:hover {
+            color: red;
+        }
+
+    .xinji > div:nth-child(3) > img {
+        height: 130px;
+    }
+
+.xinji > div {
+    overflow: hidden;
+}
+
+    .xinji > div:nth-child(4) {
+        float: left;
+    }
+
+        .xinji > div:nth-child(4) > p:first-child {
+            color: red;
+            font-size: 16px;
+            font-weight: 700;
+            margin: 6px 9px;
+        }
+
+        .xinji > div:nth-child(4) > p:nth-child(2) {
+            color: black;
+            font-size: 16px;
+            font-weight: 700;
+            margin: 6px 9px;
+        }
+
+        .xinji > div:nth-child(4) > a > p {
+            color: gainsboro;
+            font-size: 14px;
+            margin-left: 9px;
+        }
+
+            .xinji > div:nth-child(4) > a > p:hover {
+                color: red;
+            }
+
+        .xinji > div:nth-child(4) > img {
+            height: 130px;
+            padding-right: 0;
+        }
+
+.jinri {
+    float: left;
+}
+
+.zhuti-left {
+    overflow: hidden;
+}
+
+.yanyuan {
+    width: 152px;
+    margin-left: 12px;
+}
+
+.shudaizi {
+    margin-top: 18px;
+    height: 88px;
+    width: 908px;
+    background-color: white;
+}
+
+    .shudaizi > div:first-child > img {
+        float: left;
+        width: 68px;
+    }
+
+    .shudaizi > div:first-child > div > p:first-child {
+        color: brown;
+        font-size: 18px;
+        font-weight: 700;
+        padding-top: 10px;
+    }
+
+    .shudaizi > div:first-child > div > p:nth-child(2) {
+        font-size: 14px;
+        color: burlywood;
+    }
+
+    .shudaizi > div:first-child > div > span {
+        color: gainsboro;
+        font-size: 12px;
+        margin-left: -10px;
+    }
+
+    .shudaizi > div:first-child > div {
+        float: left;
+    }
+
+    .shudaizi > div:nth-child(2) > img {
+        float: left;
+        width: 70px;
+    }
+
+    .shudaizi > div:nth-child(2) > div > p:first-child {
+        color: darkgreen;
+        font-size: 18px;
+        font-weight: 700;
+        padding-top: 10px;
+    }
+
+    .shudaizi > div:nth-child(2) > div > p:nth-child(2) {
+        font-size: 14px;
+        color: green;
+    }
+
+    .shudaizi > div:nth-child(2) > div > span {
+        color: gainsboro;
+        font-size: 12px;
+        margin-left: -10px;
+    }
+
+    .shudaizi > div:nth-child(2) > div {
+        float: left;
+    }
+
+    .shudaizi > div:nth-child(3) > img {
+        float: left;
+        width: 71px;
+    }
+
+    .shudaizi > div:nth-child(3) > div > p:first-child {
+        color: #73a6f6;
+        font-size: 18px;
+        font-weight: 700;
+        padding-top: 10px;
+    }
+
+    .shudaizi > div:nth-child(3) > div > p:nth-child(2) {
+        font-size: 14px;
+        color: #96b0f6;
+    }
+
+    .shudaizi > div:nth-child(3) > div > span {
+        color: gainsboro;
+        font-size: 12px;
+        margin-left: -10px;
+    }
+
+    .shudaizi > div:nth-child(3) > div {
+        float: left;
+    }
+
+    .shudaizi > div:nth-child(4) > img {
+        float: left;
+        width: 71px;
+    }
+
+    .shudaizi > div:nth-child(4) > div > p:first-child {
+        color: #aa7dc7;
+        font-size: 18px;
+        font-weight: 700;
+        padding-top: 10px;
+    }
+
+    .shudaizi > div:nth-child(4) > div > p:nth-child(2) {
+        font-size: 14px;
+        color: #8879c8;
+    }
+
+    .shudaizi > div:nth-child(4) > div > span {
+        color: gainsboro;
+        font-size: 12px;
+        margin-left: -10px;
+    }
+
+    .shudaizi > div:nth-child(4) > div {
+        float: left;
+    }
+
+    .shudaizi > div:nth-child(5) > img {
+        float: left;
+        width: 71px;
+    }
+
+    .shudaizi > div:nth-child(5) > div > p:first-child {
+        color: darkred;
+        font-size: 18px;
+        font-weight: 700;
+        padding-top: 10px;
+    }
+
+    .shudaizi > div:nth-child(5) > div > p:nth-child(2) {
+        font-size: 14px;
+        color: red;
+    }
+
+    .shudaizi > div:nth-child(5) > div > span {
+        color: gainsboro;
+        font-size: 12px;
+        margin-left: -10px;
+    }
+
+    .shudaizi > div:nth-child(5) > div {
+        float: left;
+    }
+
+.zhuti-right {
+    width: 294px;
+    height: 600px;
+    float: right;
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+/*我常逛的*/
+.guangwu {
+    width: 1190px;
+    height: 940px;
+    margin: 0 auto;
+}
+
+.guangwu-top {
+    height: 50px;
+    width: 890px;
+    text-align: center;
+}
+
+    .guangwu-top > a {
+        float: right;
+        line-height: 30px;
+        width: 80px;
+        height: 30px;
+        font-size: 16px;
+        background-color: white;
+        margin-top: 10px;
+        border-radius: 20px;
+        color: black;
+    }
+
+    .guangwu-top > span > strong {
+        line-height: 50px;
+        color: black;
+        font-size: 20px;
+    }
+
+        .guangwu-top > span > strong:hover {
+            color: red;
+            text-shadow: 2px 3px 5px blue;
+        }
+
+.guangwu-bottom > div {
+    background-color: #ff3286;
+    width: 100px;
+    height: 264px;
+}
+
+    .guangwu-bottom > div > ul > li > p > strong {
+        font-size: 16px;
+        color: white;
+    }
+
+    .guangwu-bottom > div > ul > li > a {
+        font-size: 14px;
+        color: white;
+        background-color: #ff5b9f;
+        padding: 0 6px;
+    }
+
+    .guangwu-bottom > div > ul > li:not(:first-child) {
+        margin-top: 2px;
+    }
+
+    .guangwu-bottom > div > ul > li {
+        margin-left: 10px;
+    }
+
+        .guangwu-bottom > div > ul > li:first-child {
+            padding-top: 8px;
+        }
+
+        .guangwu-bottom > div > ul > li > a:hover {
+            color: blue;
+        }
+
+.guangwu-bottom {
+    float: left;
+}
+
+.guangwu-bottom-tupian {
+    width: 334px;
+    height: 360px;
+    border: 2px solid #ffc0d9;
+    background-color: white;
+    float: left;
+    margin-right: 12px;
+}
+
+.baosui {
+    float: left;
+    border-right: 1px solid gainsboro;
+}
+
+    .baosui > div > img {
+        height: 99px;
+        width: 92px;
+    }
+
+.gaohuitou {
+    float: left;
+    border-right: 1px solid gainsboro;
+    border-bottom: 1px solid gainsboro;
+}
+
+.tongxie {
+    border-right: 1px solid gainsboro;
+    border-bottom: 1px solid gainsboro;
+}
+
+.qinbaobie > img:first-child {
+    float: left;
+    padding: 7px;
+    border-right: 1px solid gainsboro;
+}
+
+.qinbaobie > img:nth-child(2) {
+    border-bottom: 1px solid gainsboro;
+}
+
+.guangwu-bottom1 > div {
+    background-color: #6349b3;
+    width: 100px;
+    height: 264px;
+}
+
+    .guangwu-bottom1 > div > ul > li > p > strong {
+        font-size: 16px;
+        color: white;
+    }
+
+    .guangwu-bottom1 > div > ul > li > a {
+        font-size: 14px;
+        color: white;
+        background-color: #826ec2;
+        padding: 0 6px;
+    }
+
+    .guangwu-bottom1 > div > ul > li:not(:first-child) {
+        margin-top: 2px;
+    }
+
+    .guangwu-bottom1 > div > ul > li {
+        margin-left: 10px;
+    }
+
+        .guangwu-bottom1 > div > ul > li:first-child {
+            padding-top: 8px;
+        }
+
+        .guangwu-bottom1 > div > ul > li > a:hover {
+            color: green;
+        }
+
+.guangwu-bottom1 {
+    float: left;
+}
+
+.guangwu-bottom1-tupian {
+    width: 334px;
+    height: 360px;
+    border: 2px solid #cfc7e7;
+    background-color: white;
+    float: left;
+}
+
+.baosui {
+    float: left;
+    border-right: 1px solid gainsboro;
+}
+
+    .baosui > div > img {
+        height: 99px;
+        width: 92px;
+    }
+
+.gaohuitou {
+    float: left;
+    border-right: 1px solid gainsboro;
+    border-bottom: 1px solid gainsboro;
+}
+
+.tongxie {
+    border-right: 1px solid gainsboro;
+    border-bottom: 1px solid gainsboro;
+}
+
+.qinbaobie > img:first-child {
+    float: left;
+    padding: 7px;
+    border-right: 1px solid gainsboro;
+}
+
+.qinbaobie > img:nth-child(2) {
+    border-bottom: 1px solid gainsboro;
+}
+
+.tianmaoku {
+    width: 880px;
+    margin: 0 auto;
+    height: 100px;
+    float: left;
+}
+
+.zuizuobian {
+    float: left;
+}
+
+.tianmaoku > img {
+    margin: 26px 0px;
+}
+
+.guangwu-bottom {
+    border-bottom: 1px solid darkred;
+    padding-bottom: 10px;
+}
+
+.guangwu-bottom-tupian {
+    border-bottom: 1px solid red;
+    margin-bottom: 10px;
+}
+
+
+.zuihao {
+    float: left;
+}
+
+.lki {
+    width: 110px;
+}
+
+.zuiyoubian {
+    width: 290px;
+    height: 928px;
+    margin: 0 auto;
+    float: right;
+    background-color: white;
+}
+
+.shishangbao {
+    width: 890px;
+    height: 300px;
+    margin: 0 auto;
+    /*float: left;*/
+}
+
+.shishang-bottom {
+    background-color: white;
+    height: 254px;
+    width: 902px;
+}
+
+.border > div:nth-child(2) > div > img {
+    border-right: 1px solid gainsboro;
+    border-bottom: 1px solid gainsboro;
+    height: 107px;
+}
+
+.border > div:first-child > img {
+    border-bottom: 1px solid gainsboro;
+}
+
+.border {
+    float: left;
+}
+
+.shishang-top {
+    height: 50px;
+    width: 890px;
+    text-align: center;
+    overflow: hidden;
+}
+
+    .shishang-top > a {
+        float: right;
+        line-height: 30px;
+        width: 80px;
+        height: 30px;
+        font-size: 16px;
+        background-color: white;
+        margin-top: 10px;
+        border-radius: 20px;
+        color: black;
+    }
+
+    .shishang-top > span > strong {
+        line-height: 50px;
+        color: black;
+        font-size: 20px;
+    }
+
+        .shishang-top > span > strong:hover {
+            color: red;
+            text-shadow: 2px 3px 5px blue;
+        }
+
+.zhenzixian > div:first-child {
+    float: left;
+    margin-right: 10px;
+    border-right: 1px solid gainsboro;
+    padding-right: 6px;
+    padding-left: 10px;
+}
+
+.zhenzixian > div:last-child > img {
+    border-bottom: 1px solid gainsboro;
+    padding-bottom: 6px;
+    border-right: 1px solid gainsboro;
+    padding-right: 6px;
+}
+
+.zhenzixian > div:last-child > div > img {
+    padding-top: 6px;
+    border-right: 1px solid gainsboro;
+    padding-right: 6px;
+}
+
+.zhenzixian > div > a > p {
+    color: white;
+    background-color: #ff0256;
+    width: 90px;
+    height: 40px;
+    text-align: center;
+}
+
+    .zhenzixian > div > a > p:hover {
+        color: purple;
+    }
+
+.zhenzixian > div:last-child {
+    float: left;
+}
+
+.shishangbao {
+    float: left;
+}
+
+.caoliu > img {
+    margin-top: 32px;
+}
+
+
+
+
+
+
+
+
+
+/*热卖单品*/
+.remai {
+    height: 650px;
+    width: 1190px;
+    margin: 0 auto;
+    background-color: white;
+}
+
+.remai-top {
+    height: 50px;
+    width: 1190px;
+    text-align: center;
+}
+
+    .remai-top > span > strong {
+        line-height: 50px;
+        color: black;
+        font-size: 16px;
+    }
+
+        .remai-top > span > strong:hover {
+            color: red;
+            text-shadow: 2px 3px 5px blue;
+        }
+
+.remai-center {
+    width: 1190px;
+    height: 36px;
+    margin: 0 auto;
+}
+
+.remai-bottom {
+    border-top: 1px solid gainsboro;
+    padding-top: 8px;
+    padding-left: 20px;
+}
+
+.remai-center > ul > li {
+    float: left;
+    color: black;
+    font-size: 12px;
+    border-right: 1px solid gainsboro;
+    padding: 0 9px
+}
+
+    .remai-center > ul > li:first-child {
+        padding-left: 20px;
+    }
+
+    .remai-center > ul > li > a:hover {
+        color: red;
+    }
+
+.zhenpibao {
+    float: left;
+    width: 224px;
+    height: 400px;
+    border-right: 1px solid gainsboro;
+}
+
+    .zhenpibao > div > p:first-child {
+        color: red;
+        font-size: 16px;
+        font-weight: 700;
+        margin-top: 10px;
+        margin-bottom: 8px;
+    }
+
+    .zhenpibao > div > a {
+        color: black;
+        font-size: 12px;
+        margin-right: 5px;
+        margin-top: 8px;
+    }
+
+.pibao-top > div > div > p:first-child {
+    color: red;
+    font-size: 16px;
+    font-weight: 700;
+    margin-top: 10px;
+    margin-bottom: 8px;
+}
+
+.pibao-top > div > div > p:last-child:hover {
+    color: blue;
+}
+
+.zhenpibao > img {
+    border-left: 1px solid gainsboro;
+}
+
+.pibao-top {
+    float: left;
+    padding-left: 10px;
+}
+
+.xiaohai {
+    border-top: 1px solid gainsboro;
+    padding-top: 8px;
+}
+
+.remai-last > img {
+    border-top: 1px solid gainsboro;
+    padding-top: 10px;
+}
+
+.remai-bottom a:hover {
+    color: purple;
+}
+/*消费者保障*/
+.xiaofeizhe {
+    height: 223px;
+    width: 1190px;
+    margin: 0px auto;
+    background-color: #f1f1f1;
+    margin-top: 10px;
+}
+
+    .xiaofeizhe > div:first-child {
+        width: 230px;
+        height: 86px;
+        padding: 70px 26px;
+        float: left;
+    }
+
+        .xiaofeizhe > div:first-child > p > a {
+            color: #d2d0d0;
+            text-align: center;
+            line-height: 26px;
+            margin-right: 10px;
+        }
+
+        .xiaofeizhe > div:first-child > img {
+            margin-bottom: 10px;
+        }
+
+    .xiaofeizhe > div:nth-child(2) {
+        width: 230px;
+        height: 86px;
+        padding: 70px 26px;
+        float: left;
+    }
+
+        .xiaofeizhe > div:nth-child(2) > p > a {
+            color: #d2d0d0;
+            text-align: center;
+            line-height: 26px;
+            margin-right: 10px;
+        }
+
+        .xiaofeizhe > div:nth-child(2) > img {
+            margin-bottom: 10px;
+        }
+
+    .xiaofeizhe > div:nth-child(3) {
+        width: 230px;
+        height: 86px;
+        padding: 70px 26px;
+        float: left;
+    }
+
+        .xiaofeizhe > div:nth-child(3) > p > a {
+            color: #d2d0d0;
+            text-align: center;
+            line-height: 26px;
+            margin-right: 10px;
+        }
+
+        .xiaofeizhe > div:nth-child(3) > img {
+            margin-bottom: 10px;
+        }
+
+    .xiaofeizhe > div:nth-child(4) {
+        width: 230px;
+        height: 86px;
+        padding: 70px 26px;
+        float: left;
+    }
+
+        .xiaofeizhe > div:nth-child(4) > p > a {
+            color: #d2d0d0;
+            text-align: center;
+            line-height: 26px;
+            margin-right: 10px;
+        }
+
+        .xiaofeizhe > div:nth-child(4) > img {
+            margin-bottom: 10px;
+        }
+/*页脚*/
+footer {
+    width: 100%;
+    height: 246px;
+    margin: 0 auto;
+    background-color: #ffffff;
+}
+
+    footer > div:first-child {
+        width: 1190px;
+        height: 68px;
+        margin: 0 auto;
+        border-bottom: 1px solid gainsboro;
+    }
+
+.zuihou > li {
+    float: left;
+    font-size: 14px;
+    margin: 10px 20px 0px 0;
+    padding-right: 10px;
+    color: gray;
+}
+
+    .zuihou > li:hover {
+        color: red;
+    }
+
+    .zuihou > li:not(:last-child) {
+        border-right: 1px solid gainsboro;
+    }
+
+footer > div:nth-child(2) {
+    width: 1190px;
+    height: 86px;
+    margin: 0 auto;
+}
+
+footer a, span, p {
+    color: gray;
+    font-size: 14px;
+    margin-right: 10px;
+}
+
+    footer a:hover {
+        color: blue;
+    }
+
+.foter {
+    border-left: 1px solid gainsboro;
+    padding-left: 40px;
+}
+
+.zhean > span {
+    border-right: 1px solid gainsboro;
+    padding-right: 5px;
+}
+
+    .zhean > span:nth-child(3) {
+        color: gainsboro;
+    }
+
+.zhean > p {
+    color: gainsboro;
+}
+
+footer > img {
+    width: 1190px;
+    margin: 12px auto;
+    padding-left: 88px;
+    background-color: white;
+}
+/*.green p{*/
+/*height: 400px;*/
+/*width: 50px;*/
+/*position: fixed;*/
+/*right: 15px;*/
+/*bottom: 80px;*/
+/*text-align: center;*/
+/*color: goldenrod;*/
+/*}*/
+.green {
+    height: 400px;
+    width: 50px;
+    position: fixed;
+    right: 15px;
+    bottom: 100px;
+    text-align: center;
+}
+
+    .green > a:first-child > p {
+        background-color: #ff4302;
+        color: white;
+        font-size: 14px;
+    }
+
+    .green > a:nth-child(2) > p {
+        background-color: white;
+        color: red;
+        border-bottom: 1px solid gainsboro;
+        padding: 15px 5px;
+    }
+
+    .green > a:nth-child(3) > p {
+        background-color: white;
+        color: blue;
+        border-bottom: 1px solid gainsboro;
+        padding: 15px 5px;
+    }
+
+    .green > a:nth-child(4) > p {
+        background-color: white;
+        color: green;
+        border-bottom: 1px solid gainsboro;
+        padding: 15px 5px;
+    }
+
+    .green > a:nth-child(5) > p {
+        background-color: white;
+        color: brown;
+        border-bottom: 1px solid gainsboro;
+        padding: 15px 5px;
+    }
+
+    .green > a:nth-child(6) > p {
+        background-color: white;
+        color: red;
+        border-bottom: 1px solid gainsboro;
+        padding: 15px 5px;
+    }
+
+    .green > a:nth-child(7) > p {
+        background-color: white;
+        color: black;
+        border-bottom: 1px solid gainsboro;
+        padding: 15px 5px;
+    }
+
+    .green > a:nth-child(8) > p {
+        background-color: white;
+        color: black;
+        padding: 15px 5px;
+    }

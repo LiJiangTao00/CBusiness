@@ -1,0 +1,173 @@
+﻿
+@{
+    Layout = null;
+}
+
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset="UTF-8">
+    <title></title>
+    @*<script type="text/javascript" src="js/jquery-3.3.1.js"></script>
+    <script type="text/javascript" src="layer/layer.js"></script>
+    <script type="text/javascript" src="layui/layui.all.js"></script>
+    <link rel="stylesheet" href="layui/css/layui.css" />*@
+
+</head>
+
+<body>
+    <div  id="gb">
+        <form class="layui-form" action="">
+            <div class="layui-form-item">
+                <label class="layui-form-label">用户账号</label>
+                <div class="layui-input-inline">
+                    <input type="text" name="username" required lay-verify="required" placeholder="请输入账号" autocomplete="off" class="layui-input">
+                </div>
+            </div>
+            <div class="layui-form-item">
+                <label class="layui-form-label">用户密码</label>
+                <div class="layui-input-inline">
+                    <input type="password" name="password" required lay-verify="pwd" placeholder="请输入密码" autocomplete="off" class="layui-input" id="pass1">
+                </div>
+            </div>
+            <div class="layui-form-item">
+                <label class="layui-form-label">确认密码</label>
+                <div class="layui-input-inline">
+                    <input type="password" name="passwords" required lay-verify="pwd" placeholder="请再次输入密码" autocomplete="off" class="layui-input" id="pass2">
+                </div>
+            </div>
+            <div class="layui-form-item">
+                <label class="layui-form-label">邮箱</label>
+                <div class="layui-input-inline">
+                    <input type="email" name="email" required lay-verify="emails" placeholder="请输入邮箱" autocomplete="off" class="layui-input">
+                </div>
+            </div>
+            <div class="layui-form-item">
+                <label class="layui-form-label">联系方式</label>
+                <div class="layui-input-inline">
+                    <input type="text" name="phone" required lay-verify="phones" placeholder="请输入手机号" autocomplete="off" class="layui-input">
+                </div>
+            </div>
+            <div class="layui-form-item">
+                <label class="layui-form-label">单选框</label>
+                <div class="layui-input-block">
+                    <input type="radio" name="sex" value="男" title="男" checked>
+                    <input type="radio" name="sex" value="女" title="女">
+                </div>
+            </div>
+            <div class="layui-form-item">
+                <label class="layui-form-label">复选框</label>
+                <div class="layui-input-block">
+                    <input type="checkbox" name="like[write]" title="发呆">
+                    <input type="checkbox" name="like[read]" title="发呆" checked>
+                    <input type="checkbox" name="like[dai]" title="发呆">
+                </div>
+            </div>
+            <div class="layui-form-item">
+                <div class="layui-inline">
+                    <label class="layui-form-label">所在地</label>
+                    <div class="layui-input-inline">
+                        <select name="type" lay-verify="required" lay-filter="type">
+                            <option value=""></option>
+                            <option value="1">北京</option>
+                            <option value="2">上海</option>
+                            <option value="3">广州</option>
+                        </select>
+                    </div>
+                </div>
+            </div>
+            <div class="layui-form-item">
+                <label class="layui-form-label">真实姓名</label>
+                <div class="layui-input-inline">
+                    <input type="text" name="truename" required lay-verify="truename" placeholder="请输入您的姓名" autocomplete="off" class="layui-input">
+                </div>
+            </div>
+            <div class="layui-form-item">
+                <label class="layui-form-label">身份证</label>
+                <div class="layui-input-inline">
+                    <input type="text" name="cardId" required lay-verify="cardId" placeholder="请输入身份证号" autocomplete="off" class="layui-input">
+                </div>
+            </div>
+            <div class="layui-form-item">
+                <div class="layui-input-block">
+                    <button class="layui-btn" lay-submit lay-filter="formDemo">立即提交</button>
+                    <button type="reset" class="layui-btn layui-btn-primary">重置</button>
+                </div>
+            </div>
+        </form>
+
+    </div>
+</body>
+
+
+</html>
+<script>
+        layui.use(['layer', 'element', 'form', 'layedit'], function() {
+            var layer = layui.layer;
+            var form = layui.form;
+            var element = layui.element;
+            var layedit = layui.layedit;
+            $(function() {
+                $("#butt").click(function() {
+                    layer.open({
+                        type: 1,
+                        title: "注册页面",
+                        area: ['600px', '700px'],
+                        offset: '20px',
+                        content: $("#gb"),
+                        cancel: function() {
+                            // 你点击右上角 X 取消后要做什么
+                            setTimeout('window.location.reload()', 1);
+                        },
+                        success: function() {
+                            form.on('submit(formDemo)', function(data) {
+
+                            });
+                        }
+                    })
+                    form.render();
+                })
+
+                //验证输入的密码是否相同；
+                $("#pass2").blur(function() {
+                    var pass1 = $("#pass1").val();
+                    var pass2 = $("#pass2").val();
+                    if(pass1 != pass2) {
+                        layer.msg("两次输入的密码不一致", {
+                            "icon": 2,
+                            "time": 2000
+                        });
+                        $("#pass2").val("");
+                        return false;
+                    }
+                    return true;
+                });
+            });
+            //创建一个编辑器
+            var editIndex = layedit.build('LAY_demo_editor');
+            //自定义验证规则
+            form.verify({
+                title: function(value) {
+                    if(value.length < 5) {
+                        return '标题至少得5个字符啊';
+                    }
+                },
+                pwd: [
+                    /^(\w){6,20}$/, '只能输入6-20个字母、数字、下划线'
+                ],
+                phones: [
+                    /^1([38][0-9]|4[579]|5[0-3,5-9]|6[6]|7[0135678]|9[89])\d{8}$/, '您的输入有误，请重新输入(中国11位手机号)'
+                ],
+                truename: [
+                    /^[\u4e00-\u9fa5]{2,4}$/, '您的输入有误，请输入2-4位中文'
+                ],
+                cardId: [
+                    /(^\d{15}$)|(^\d{18}$)|(^\d{17}(\d|X|x)$)/, '请输入正确的身份证号'
+                ],
+                content: function(value) {
+                    layedit.sync(editIndex);
+                }
+            });
+        });
+</script>
